@@ -5,6 +5,14 @@
 
 using namespace std;
 
+void myFunc(int *x) {
+  cout << "Please number to be stored in a memory location" << endl;
+  cin >> *x;
+  cout << endl;
+}
+
+// Outputs 100
+
 // Add Function
 int add(int n1, int n2)
 {
@@ -39,6 +47,7 @@ int divide(int n1, int n2)
 // Entry input function
  int input_1(int entry1)
 {
+    cout << endl;
     cout << "Enter other numbers is quit\n";
     cout << "Enter 1 for multiplication\n";
     cout << "Enter 2 for addition\n";
@@ -174,13 +183,30 @@ int main()
 {
     int factorialnumber;
     cout << endl;
-    cout << "Practicing Factorials" << endl;
+    cout << "Practicing Factorials. Please enter number to perform factorial for" << endl;
     cin >> factorialnumber;
-    cout << factorial(factorialnumber) << endl;
+    cout << endl;
+    cout << factorialnumber << " ! = " <<factorial(factorialnumber) << endl;
 
 }
+// understanding pointers and addresses
+{
+    int var;
+    cout << endl;
+    cout << "Enter a number to be stored in this location. "<< &var << endl;
+    cin >> var;
+    cout << endl;
+    cout << "Memory location " << &var << " contains the value " << var << endl;
+    myFunc(&var);
+    cout << endl;
+    cout << "Memory location " << &var << " contains the value " << var << endl;
+    cout << endl;
+    cout << "we can use pointers to change the value in a particular memory location." << endl;
+    cout << endl;
+}
 
-
+    cout << "Hoped you had fun!" << endl;
+    cout << endl;
   return 0;
 }
 
