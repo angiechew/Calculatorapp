@@ -5,6 +5,7 @@
 
 using namespace std;
 
+void tripleNumbers (int&, int&);
 void timesTwo(int&, int&);
 void square(int&, int&);
 void cube(int&, int&);
@@ -18,7 +19,7 @@ main()
     int numone=1, numtwo=2;
     int selection, n;
 
-    const int maxArray = 6;
+    const int maxArray = 10;
     void (*pFunArray[maxArray])(int&, int&);
 
     for (n=0;n< maxArray;n++)
@@ -28,6 +29,7 @@ main()
         cout << "(3) For Cube  ";
         cout << "(4) To swap numbers  " ;
         cout << "(5) Double the numbers ";
+        cout << "(6) Triple the numbers ";
         cin >> selection;
         switch (selection)
             {
@@ -45,6 +47,9 @@ main()
                 break;
             case 5:
                 pFunArray[n] = timesTwo;
+                break;
+            case 6:
+                pFunArray[n] = tripleNumbers;
                 break;
             default:
                 pFunArray[n] = 0;
@@ -87,6 +92,12 @@ void getNumber(int &rA, int &rB)
 }
 void timesTwo(int &rA, int &rB)
 {
-    rA = 2 * rA;
-    rB = 2 * rB;
+    rA += rA;
+    rB += rB;
+}
+
+void tripleNumbers (int &rA, int &rB)
+{
+    rA = 3 * rA;
+    rB = 3 * rB;
 }
