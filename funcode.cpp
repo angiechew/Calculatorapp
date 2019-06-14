@@ -19,7 +19,7 @@ main()
     int numone=1, numtwo=2;
     int selection, n;
 
-    const int maxArray = 10;
+    const int maxArray = 5;
     void (*pFunArray[maxArray])(int&, int&);
 
     for (n=0;n< maxArray;n++)
